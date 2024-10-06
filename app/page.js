@@ -15,7 +15,7 @@ export default function Home() {
       case 'about':
         return { width: '44px' }; // Width for "About"
       case 'projects':
-        return { width: '57px' }; // Width for "Experiences"
+        return { width: '62px' }; // Width for "Experiences"
       default:
         return { width: '44px' }; // Default to "About"
     }
@@ -26,7 +26,7 @@ export default function Home() {
       case 'about':
         return { transform: 'translateX(0px)' }; // Position for "About"
       case 'projects':
-        return { transform: 'translateX(62px)' }; // Position for "Experiences"
+        return { transform: 'translateX(64px)' }; // Position for "Experiences"
       default:
         return { transform: 'translateX(0px)' }; // Default to "About"
     }
