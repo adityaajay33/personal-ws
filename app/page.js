@@ -1,101 +1,227 @@
-import Image from "next/image";
+'use client';
+import { useState } from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
+import '../styles/globals.css';
+import styles from '../styles/page.module.css';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  // State to track the currently active tab
+  const [activeTab, setActiveTab] = useState('about');
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  // Function to calculate the position of the underline based on the active tab
+  const getUnderlineLength = () => {
+    switch (activeTab) {
+      case 'about':
+        return { width: '44px' }; // Width for "About"
+      case 'projects':
+        return { width: '90px' }; // Width for "Experiences"
+      default:
+        return { width: '44px' }; // Default to "About"
+    }
+  };
+  
+  const getUnderlineStyles = () => {
+    switch (activeTab) {
+      case 'about':
+        return { transform: 'translateX(0px)' }; // Position for "About"
+      case 'projects':
+        return { transform: 'translateX(62px)' }; // Position for "Experiences"
+      default:
+        return { transform: 'translateX(0px)' }; // Default to "About"
+    }
+  };
+
+
+  // Function to render the correct content based on the active tab
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'about':
+        return (
+          <>
+            {/* About Section */}
+            <section className={styles.about}>
+              <p className={styles.content}>
+                Currently designing a better way to access all of Meta technologies, dabbling with creative tech, and open to freelance for non-profits.
+              </p>
+            </section>
+
+            {/* Work Experience Section */}
+            <section className={styles.workExperience}>
+              <h2 className={styles.sectionTitle}>Work Experience</h2>
+
+              <div className={styles.workExperienceCard}>
+                <div className={styles.date}>
+                  2024 - Now
+                </div>
+                <div className={styles.jobDetails}>
+                  <div className={styles.title}>
+                    Machine Learning Systems Engineer
+                  </div>
+                  <div className={styles.location}>
+                    Waterloo, Ontario
+                  </div>
+                  <div className={styles.description}>Proactively preventing users from losing access to their accounts and designing new methods beyond traditional account recovery to assist users in accessing their accounts.
+                  </div>
+                </div>
+              </div>
+              <div className={styles.workExperienceCard}>
+                <div className={styles.date}>
+                  2024
+                </div>
+                <div className={styles.jobDetails}>
+                  <div className={styles.title}>
+                    Machine Learning - Systems Engineer
+                  </div>
+                  <div className={styles.location}>
+                    Waterloo, Ontario
+                  </div>
+                  <div className={styles.description}>
+Designing the login screen experience for all Meta applications and developing identification features to help users easily find and save their accounts for improved access.
+                  </div>
+                </div>
+              </div>
+              <div className={styles.workExperienceCard}>
+                <div className={styles.date}>
+                  2024
+                </div>
+                <div className={styles.jobDetails}>
+                  <div className={styles.title}>
+                    Machine Learning - Systems Engineer
+                  </div>
+                  <div className={styles.location}>
+                    Waterloo, Ontario
+                  </div>
+                  <div className={styles.description}>
+                  Access Loss Prevention Team: Proactively preventing users from losing access to their accounts and designing new methods beyond traditional account recovery to assist users in accessing their accounts.
+                  </div>
+                </div>
+              </div>
+
+              
+            </section>
+            <section className={styles.education}>
+              <h2 className={styles.sectionTitle}>Education</h2>
+
+              <div className={styles.workExperienceCard}>
+                <div className={styles.date}>
+                  2023 - 2028
+                </div>
+                <div className={styles.jobDetails}>
+                  <div className={styles.title}>
+                    Mechatronics Engineering at the University of Waterloo
+                  </div>
+                  <div className={styles.location}>
+                    Waterloo, Ontario
+                  </div>
+                  <div className={styles.description}>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section className={styles.contact} style={{height:"40px"}}>
+              <h2 className={styles.sectionTitle}>Socials</h2>
+
+              <div className={styles.workExperienceCard} style={{margin: "15px 0px"}}>
+                <div className={styles.date}>
+                  Github
+                </div>
+                <div className={styles.jobDetails}>
+                  <div className={styles.title}>
+                    adityaajay33
+                  </div>
+                </div>
+              </div>
+              <div className={styles.workExperienceCard} style={{margin: "15px 0px"}}>
+                <div className={styles.date}>
+                  LinkedIn
+                </div>
+                <div className={styles.jobDetails}>
+                  <div className={styles.title}>
+                    Aditya Ajay
+                  </div>
+                </div>
+              </div>
+              <div className={styles.workExperienceCard} style={{margin: "15px 0px 100px 0px", paddingBottom: 40}}>
+                <div className={styles.date}>
+                  Instagram
+                </div>
+                <div className={styles.jobDetails}>
+                  <div className={styles.title}>
+                    aj_mmv
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+          </>
+        );
+      case 'projects':
+        return (
+          <section className={styles.projects} style={{marginTop:40}}>
+            <p>Details about your projects go here.</p>
+          </section>
+        );
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <div className={styles.container}>
+      <Head>
+        <title>Aditya Ajay Portfolio</title>
+        <meta name="description" content="Portfolio of Aditya Ajay" />
+      </Head>
+
+      {/* Header Section */}
+      <header className={styles.header}>
+        <div style={{ paddingRight: '16px', height: 92, width: 92 }}>
+          <Image
+            src="/profile.png"
+            alt="Profile Image"
+            className={styles.profileImage}
+            width={92}
+            height={92}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div style={{ width: '432px', height: '48px', marginLeft: 10}}>
+          <h1 className={styles.name}>Aditya Ajay</h1>
+          <p className={styles.subtitle}>Mechatronics @ UWaterloo</p>
+        </div>
+      </header>
+
+      {/* Tabs Navigation */}
+      <div className={styles.tabContainer}>
+        <div className={styles.tabs}>
+          <span
+            className={activeTab === 'about' ? styles.activeTab : styles.tab}
+            onClick={() => setActiveTab('about')}
+          >
+            About
+          </span>
+          <span
+            className={activeTab === 'projects' ? styles.activeTab : styles.tab}
+            onClick={() => setActiveTab('projects')}
+          >
+            Experiences
+          </span>
+          
+        </div>
+        <div
+          className={styles.underline}
+          style={{
+            ...getUnderlineLength(), // Spread the width from getUnderlineLength
+            ...getUnderlineStyles(), // Spread the transform from getUnderlineStyles
+          }}
+        />
+      </div>
+
+      {/* Dynamic Content Based on Active Tab */}
+      <div className={styles.content}>
+        {renderContent()}
+      </div>
     </div>
   );
 }

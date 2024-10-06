@@ -1,0 +1,171 @@
+/* app/page.module.css */
+.container {
+  max-width: 540px; /* Adjust this to your desired width */
+  margin: 0 auto;   /* Centers the container */
+  padding: 72px 20px; /* Adds padding on all sides */
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.imageContainer {
+  margin-right: 20px;
+}
+
+.profileImage {
+  border-radius: 50%;
+  background-color: #222222;
+}
+
+.textContainer {
+  color: #eeeeee;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 400;
+  height: 26px;
+}
+
+.subtitle {
+  display: flex;
+  font-size: 16px;
+  color: #bbbbbb;
+  height:22px;
+  align-items: center;
+}
+
+.about{
+  height: 44px;
+  margin: 40px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.workExperience {
+  height: 44px;
+  margin: 50px 0px;
+}
+
+
+.job {
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.job h3 {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.job p {
+  font-size: 16px;
+  color: #eeeeee;
+}
+
+.subTag{
+  color: #bbbbbb
+}
+
+.content{
+  color: #a7a7a7;
+  font-size: 16px;
+}
+
+.tabContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* Push the tabs to the left */
+  border-bottom: none; /* Remove the grey line under the tabs */
+}
+/* New styling for the tabs */
+.tabs {
+  display: flex;
+  justify-content: flex-start; /* Push tabs to the left */
+  width: auto; /* Allow the tabs to have a natural width */
+  gap: 20px; /* Add some space between each tab */
+  position: relative;
+}
+
+.tab {
+  color: #888;
+  font-size: 16px;
+  cursor: pointer;
+  padding-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.activeTab {
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  padding-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+/* Keep the underline style basic */
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 1px;
+  background-color: white;
+  transition: transform 0.3s ease, width 0.3s ease; /* Smooth transition for both width and position */
+}
+
+.sectionTitle{
+
+  font-family: 'Graphik', sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  color: white;
+  padding-bottom: 8px;
+}
+
+.workExperience{
+  height: 480px;
+}
+
+.workExperienceCard {
+  display: flex;           /* Use flexbox to align items side by side */
+  justify-content: flex-start;  /* Align them to the start */
+  gap: 20px;               /* Adjust the space between the two divs */
+  margin: 28px 0px;
+  margin-bottom: 40px;
+}
+
+.date {
+  color: #7b7b7b;
+  width: 20%;
+}
+
+.jobDetails{
+  width: 80%;
+  font-size: 15px;
+}
+
+.title {
+  width: 100%;
+  color: #eeeeee;
+  padding-bottom: 2px;
+  height: 22px;
+  display: flex;
+}
+
+.location{
+  padding-bottom: 12px;
+
+  color: #bbbbbb
+}
+
+.description{
+  font-weight: 200;
+  color: #bbbbbb
+}

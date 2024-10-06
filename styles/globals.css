@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/Graphik-Regular.woff') format('wofff'); /* Use OTF format */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/Graphik-Light.woff') format('wofff'); /* Use OTF format */
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/Graphik-Medium.woff') format('wofff'); /* Use OTF format */
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* styles/globals.css */
+body {
+  margin: 0;
+  font-family: 'Graphik', sans-serif;
+  background-color: #282828; /* Dark background */
+  color: #eeeeee; /* Light text color */
+  font-size: 20px;
+  font-weight: 200;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+body {
+  background-color: #222222; /* Dark background */
+  color: #eeeeee; /* Light text */
+  font-family: 'Graphik', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.profileImage {
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: 32px;
+  font-family: 'Graphik', sans-serif;
+  font-weight: 200 !important;
+}
+
+p {
+  font-size: 16px;
+  color: #eeeeee;
+}
+
+.about{
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.job {
+  margin-bottom: 30px;
+}
+
+.job h3 {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.job p {
+  font-size: 16px;
+  color: #eeeeee;
+}
