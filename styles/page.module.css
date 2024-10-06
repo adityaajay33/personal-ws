@@ -169,3 +169,20 @@
   font-weight: 200;
   color: #bbbbbb
 }
+
+@media (max-width: 768px) {
+  .workExperienceCard {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align text to the left */
+  }
+
+  .title {
+    font-size: 18px; /* Adjust font size if needed */
+    margin-bottom: 8px;
+  }
+
+  .location {
+    margin-top: 5px; /* Add space between title and location */
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}

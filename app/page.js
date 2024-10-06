@@ -108,7 +108,7 @@ Designing the login screen experience for all Meta applications and developing i
                   2023 - 2028
                 </div>
                 <div className={styles.jobDetails}>
-                  <div className={styles.title}>
+                  <div className={styles.title} style={{marginBottom: 8}}>
                     Mechatronics Engineering at the University of Waterloo
                   </div>
                   <div className={styles.location}>
@@ -129,7 +129,7 @@ Designing the login screen experience for all Meta applications and developing i
                 <div className={styles.jobDetails}>
                   <div className={styles.title}>
                     adityaajay33
-                    
+
                   </div>
                 </div>
               </div>
