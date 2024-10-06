@@ -87,7 +87,7 @@ export default function Home() {
                 </div>
                 <div className={styles.jobDetails}>
                   <div className={styles.title}>
-                  Student Research Author at Journal of Emerging Investigators
+                  Student Research Author at JEI
                   </div>
                   <div className={styles.location}>
                   Toronto, Ontario
