@@ -15,7 +15,7 @@ export default function Home() {
       case 'about':
         return { width: '44px' }; // Width for "About"
       case 'projects':
-        return { width: '90px' }; // Width for "Experiences"
+        return { width: '57px' }; // Width for "Experiences"
       default:
         return { width: '44px' }; // Default to "About"
     }
@@ -42,58 +42,58 @@ export default function Home() {
             {/* About Section */}
             <section className={styles.about}>
               <p className={styles.content}>
-                Currently designing a better way to access all of Meta technologies, dabbling with creative tech, and open to freelance for non-profits.
+                Currently working on reinforcement learning projects in the robotics and finance space, learning Japanese, and doing things better.
               </p>
             </section>
 
             {/* Work Experience Section */}
-            <section className={styles.workExperience}>
+            <section className={styles.workExperience} style={{marginBottom: 0}}>
               <h2 className={styles.sectionTitle}>Work Experience</h2>
 
               <div className={styles.workExperienceCard}>
                 <div className={styles.date}>
-                  2024 - Now
+                  May - August <br/>2024
                 </div>
                 <div className={styles.jobDetails}>
                   <div className={styles.title}>
-                    Machine Learning Systems Engineer
+                    Machine Learning Engineer at Toyota Canada
                   </div>
                   <div className={styles.location}>
                     Waterloo, Ontario
                   </div>
-                  <div className={styles.description}>Proactively preventing users from losing access to their accounts and designing new methods beyond traditional account recovery to assist users in accessing their accounts.
+                  <div className={styles.description}>Designed an LSTM Autoencoder-based anomaly detection pipeline for 810 robots, reducing motor downtime by 19 minutes monthly. Co-engineered a data platform for 13 million records using Redis, PostgreSQL, and Plotly.
                   </div>
                 </div>
               </div>
               <div className={styles.workExperienceCard}>
                 <div className={styles.date}>
-                  2024
+                  2023 - 2024
                 </div>
                 <div className={styles.jobDetails}>
                   <div className={styles.title}>
-                    Machine Learning - Systems Engineer
+                    Firmware Developer at Waterloo Aerial Robotics Group
                   </div>
                   <div className={styles.location}>
                     Waterloo, Ontario
                   </div>
                   <div className={styles.description}>
-Designing the login screen experience for all Meta applications and developing identification features to help users easily find and save their accounts for improved access.
+                  Created data acquisition algorithms for IMU and Brake IR Sensors using SPI/UART on STM32 MCU.
                   </div>
                 </div>
               </div>
-              <div className={styles.workExperienceCard}>
+              <div className={styles.workExperienceCard} style={{marginBottom: 0}}>
                 <div className={styles.date}>
                   2024
                 </div>
                 <div className={styles.jobDetails}>
                   <div className={styles.title}>
-                    Machine Learning - Systems Engineer
+                  Student Research Author at Journal of Emerging Investigators
                   </div>
                   <div className={styles.location}>
-                    Waterloo, Ontario
+                  Toronto, Ontario
                   </div>
                   <div className={styles.description}>
-                  Access Loss Prevention Team: Proactively preventing users from losing access to their accounts and designing new methods beyond traditional account recovery to assist users in accessing their accounts.
+                  Published a machine learning paper on predicting EV carbon emission reductions with 98% R-squared accuracy.
                   </div>
                 </div>
               </div>
@@ -108,7 +108,7 @@ Designing the login screen experience for all Meta applications and developing i
                   2023 - 2028
                 </div>
                 <div className={styles.jobDetails}>
-                  <div className={styles.title} style={{marginBottom: 8}}>
+                  <div className={styles.title} style={{marginBottom: 3}}>
                     Mechatronics Engineering at the University of Waterloo
                   </div>
                   <div className={styles.location}>
@@ -120,16 +120,20 @@ Designing the login screen experience for all Meta applications and developing i
               </div>
             </section>
             <section className={styles.contact} style={{height:"40px"}}>
-              <h2 className={styles.sectionTitle}>Socials</h2>
+              <h2 className={styles.sectionTitle} style={{paddingBottom: 20}}>Socials</h2>
 
               <div className={styles.workExperienceCard} style={{margin: "15px 0px"}}>
                 <div className={styles.date}>
                   Github
                 </div>
                 <div className={styles.jobDetails}>
-                  <div className={styles.title}>
-                    adityaajay33
-
+                  <div className={styles.title} style={{ paddingBottom: 0}}>
+                    <a href="https://www.github.com/adityaajay33" className="socialLink" style={{marginRight:1}}>
+                      adityaajay33
+                    </a>
+                    <svg width="20" height="20" fill="none" viewBox="0 -0.5 18 18" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.5 3C3.22386 3 3 3.22386 3 3.5C3 3.77614 3.22386 4 3.5 4V3ZM8.5 3.5H9C9 3.22386 8.77614 3 8.5 3V3.5ZM8 8.5C8 8.77614 8.22386 9 8.5 9C8.77614 9 9 8.77614 9 8.5H8ZM2.64645 8.64645C2.45118 8.84171 2.45118 9.15829 2.64645 9.35355C2.84171 9.54882 3.15829 9.54882 3.35355 9.35355L2.64645 8.64645ZM3.5 4H8.5V3H3.5V4ZM8 3.5V8.5H9V3.5H8ZM8.14645 3.14645L2.64645 8.64645L3.35355 9.35355L8.85355 3.85355L8.14645 3.14645Z" fill="#eee"/>
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -138,18 +142,28 @@ Designing the login screen experience for all Meta applications and developing i
                   LinkedIn
                 </div>
                 <div className={styles.jobDetails}>
-                  <div className={styles.title}>
-                    Aditya Ajay
+                  <div className={styles.title} style={{ paddingBottom: 0}}>
+                    <a href="https://www.linkedin.com/in/adityaajay33" className="socialLink" style={{marginRight:1}}>
+                      Aditya Ajay
+                    </a>
+                    <svg width="20" height="20" fill="none" viewBox="0 -0.5 18 18" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.5 3C3.22386 3 3 3.22386 3 3.5C3 3.77614 3.22386 4 3.5 4V3ZM8.5 3.5H9C9 3.22386 8.77614 3 8.5 3V3.5ZM8 8.5C8 8.77614 8.22386 9 8.5 9C8.77614 9 9 8.77614 9 8.5H8ZM2.64645 8.64645C2.45118 8.84171 2.45118 9.15829 2.64645 9.35355C2.84171 9.54882 3.15829 9.54882 3.35355 9.35355L2.64645 8.64645ZM3.5 4H8.5V3H3.5V4ZM8 3.5V8.5H9V3.5H8ZM8.14645 3.14645L2.64645 8.64645L3.35355 9.35355L8.85355 3.85355L8.14645 3.14645Z" fill="#eee"/>
+                    </svg>
                   </div>
                 </div>
               </div>
               <div className={styles.workExperienceCard} style={{margin: "15px 0px 100px 0px", paddingBottom: 40}}>
                 <div className={styles.date}>
-                  Instagram
+                  Email
                 </div>
                 <div className={styles.jobDetails}>
-                  <div className={styles.title}>
-                    aj_mmv
+                  <div className={styles.title} style={{ paddingBottom: 0}}>
+                    <a href="mailto:a2ajay@uwaterloo.ca" className="socialLink" style={{marginRight:1}}>
+                      a2ajay@uwaterloo.ca
+                    </a>
+                    <svg width="20" height="20" fill="none" viewBox="0 -0.5 18 18" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.5 3C3.22386 3 3 3.22386 3 3.5C3 3.77614 3.22386 4 3.5 4V3ZM8.5 3.5H9C9 3.22386 8.77614 3 8.5 3V3.5ZM8 8.5C8 8.77614 8.22386 9 8.5 9C8.77614 9 9 8.77614 9 8.5H8ZM2.64645 8.64645C2.45118 8.84171 2.45118 9.15829 2.64645 9.35355C2.84171 9.54882 3.15829 9.54882 3.35355 9.35355L2.64645 8.64645ZM3.5 4H8.5V3H3.5V4ZM8 3.5V8.5H9V3.5H8ZM8.14645 3.14645L2.64645 8.64645L3.35355 9.35355L8.85355 3.85355L8.14645 3.14645Z" fill="#eee"/>
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -160,9 +174,44 @@ Designing the login screen experience for all Meta applications and developing i
         );
       case 'projects':
         return (
-          <section className={styles.projects} style={{marginTop:40}}>
-            <p>Details about your projects go here.</p>
-          </section>
+          
+          <section className={styles.contact} style={{marginTop:"40px"}}>
+              <h2 className={styles.sectionTitle}>Projects</h2>
+
+              <div className={styles.workExperienceCard} style={{margin: "30px 0px"}}>
+                <div className={styles.date}>
+                  Sep 2024 - Now
+                </div>
+                <div className={styles.jobDetails}>
+                  <div className={styles.title}>
+                  Stock Market Trading Simulation for Strategy Optimization
+                  </div>
+                  <div className={styles.location}>
+                    Waterloo, Ontario
+                  </div>
+                  <div className={styles.description}>
+                  Created a Deep Q-Network agent for Mean Reversion stock trading strategies using 30,000 Apple stock prices, resulting in a 45% ROI.
+                  </div>
+                </div>
+              </div>
+              <div className={styles.workExperienceCard} style={{margin: "15px 0px"}}>
+                <div className={styles.date}>
+                  2023 - 2024
+                </div>
+                <div className={styles.jobDetails}>
+                  <div className={styles.title}>
+                  PortfolioBase - Portfolio Sharing Application
+                  </div>
+                  <div className={styles.location}>
+                    Toronto, Ontario
+                  </div>
+                  <div className={styles.description}>
+                  Developed and deployed a portfolio-sharing web app that connected design students with agencies, receiving a $3000 grant from the Government of Ontario for its impact.
+                  </div>
+                </div>
+              </div>
+              
+            </section>
         );
       default:
         return null;
@@ -206,7 +255,7 @@ Designing the login screen experience for all Meta applications and developing i
             className={activeTab === 'projects' ? styles.activeTab : styles.tab}
             onClick={() => setActiveTab('projects')}
           >
-            Experiences
+            Projects
           </span>
           
         </div>
