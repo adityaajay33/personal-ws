@@ -94,6 +94,7 @@ export default function Home() {
                   </div>
                   <div className={styles.description}>
                   Published a machine learning paper on predicting EV carbon emission reductions with 98% R-squared accuracy.
+                    
                   </div>
                 </div>
               </div>
@@ -191,6 +192,10 @@ export default function Home() {
                   </div>
                   <div className={styles.description}>
                   Created a Deep Q-Network agent for Mean Reversion stock trading strategies using 30,000 Apple stock prices, resulting in a 45% ROI.
+                  
+                  <div class="video-container" style={{borderRadius: "10px", overflow: "hidden", paddingTop: 15, height:120, width: 216}}>
+                    <video src='https://res.cloudinary.com/didbbtyab/video/upload/v1728412648/Apple_kios4n.mp4' autoplay loop muted style={{borderRadius: "inherit", width: "100%", height: '100%', objectFit: "cover"}}></video>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -207,6 +212,9 @@ export default function Home() {
                   </div>
                   <div className={styles.description}>
                   Developed and deployed a portfolio-sharing web app that connected design students with agencies, receiving a $3000 grant from the Government of Ontario for its impact.
+                  <div class="video-container" style={{borderRadius: "10px", overflow: "hidden", paddingTop: 15, height:120, width: 216}}>
+                    <video src='https://res.cloudinary.com/didbbtyab/video/upload/v1728412648/Apple_kios4n.mp4' autoplay loop muted playsInline style={{borderRadius: "inherit", width: "100%", height: '100%', objectFit: "cover"}}></video>
+                  </div>
                   </div>
                 </div>
               </div>
