@@ -55,7 +55,7 @@ export default function Home() {
                   May - August <br/>2024
                 </div>
                 <div className={styles.jobDetails}>
-                  <div className={styles.title}>
+                  <div className={styles.shortTitle}>
                     Machine Learning Engineer at Toyota Canada
                   </div>
                   <div className={styles.location}>
@@ -87,7 +87,7 @@ export default function Home() {
                 </div>
                 <div className={styles.jobDetails}>
                   <div className={styles.title}>
-                  Student Research Author at JEI
+                  Student Research Author at Journal of Emerging Investigators
                   </div>
                   <div className={styles.location}>
                   Toronto, Ontario
@@ -109,7 +109,7 @@ export default function Home() {
                   2023 - 2028
                 </div>
                 <div className={styles.jobDetails}>
-                  <div className={styles.title} style={{marginBottom: 3}}>
+                  <div className={styles.shortTitle} style={{marginBottom: 3}}>
                     Mechatronics Engineering at the University of Waterloo
                   </div>
                   <div className={styles.location}>
@@ -248,12 +248,14 @@ export default function Home() {
           <h1 className={styles.name}>Aditya Ajay</h1>
           <div className={styles.descLinks}>
               <p className={styles.subtitle}>Mechatronics @ UWaterloo</p>
-              <a href="https://www.linkedin.com/in/adityaajay33" target="_blank" rel="noopener noreferrer">
-                <Image src="/icon/linkedin.png" alt="LinkedIn" width={24} height={24} />
-              </a>
-              <a href="https://www.github.com/adityaajay33" target="_blank" rel="noopener noreferrer">
-                <Image src="/icon/github.png" alt="GitHub" width={24} height={24} />
-              </a>
+              <div className={styles.icons}>
+                <a href="https://www.linkedin.com/in/adityaajay33" target="_blank" rel="noopener noreferrer">
+                  <Image src="/icon/linkedin.png" alt="LinkedIn" width={24} height={24} />
+                </a>
+                <a href="https://www.github.com/adityaajay33" target="_blank" rel="noopener noreferrer">
+                  <Image src="/icon/github.png" alt="GitHub" width={24} height={24} />
+                </a>
+              </div>
           </div>
         </div>
       </header>
