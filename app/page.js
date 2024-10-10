@@ -246,7 +246,15 @@ export default function Home() {
         </div>
         <div style={{ width: '432px', height: '48px', marginLeft: 10}}>
           <h1 className={styles.name}>Aditya Ajay</h1>
-          <p className={styles.subtitle}>Mechatronics @ UWaterloo</p>
+          <div className={styles.descLinks}>
+              <p className={styles.subtitle}>Mechatronics @ UWaterloo</p>
+              <a href="https://www.linkedin.com/in/adityaajay33" target="_blank" rel="noopener noreferrer">
+                <Image src="/icon/linkedin.png" alt="LinkedIn" width={24} height={24} />
+              </a>
+              <a href="https://www.github.com/adityaajay33" target="_blank" rel="noopener noreferrer">
+                <Image src="/icon/github.png" alt="GitHub" width={24} height={24} />
+              </a>
+          </div>
         </div>
       </header>
 

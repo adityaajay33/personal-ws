@@ -37,6 +37,7 @@
   color: #bbbbbb;
   height:22px;
   align-items: center;
+  width: 90%;
 }
 
 .about{
@@ -193,4 +194,10 @@
   height: 100%;
   z-index: 1; /* Position it above video if needed */
   pointer-events: none; /* Let clicks pass through */
+}
+
+.descLinks{
+
+  display: flex;
+  flex-direction: row;
 }
