@@ -55,7 +55,7 @@ export default function Home() {
                   May - August <br/>2024
                 </div>
                 <div className={styles.jobDetails}>
-                  <div className={styles.title}>
+                  <div className={styles.shortTitle}>
                     Machine Learning Engineer at Toyota Canada
                   </div>
                   <div className={styles.location}>
@@ -87,13 +87,14 @@ export default function Home() {
                 </div>
                 <div className={styles.jobDetails}>
                   <div className={styles.title}>
-                  Student Research Author at JEI
+                  Student Research Author at Journal of Emerging Investigators
                   </div>
                   <div className={styles.location}>
                   Toronto, Ontario
                   </div>
                   <div className={styles.description}>
                   Published a machine learning paper on predicting EV carbon emission reductions with 98% R-squared accuracy.
+                    
                   </div>
                 </div>
               </div>
@@ -108,7 +109,7 @@ export default function Home() {
                   2023 - 2028
                 </div>
                 <div className={styles.jobDetails}>
-                  <div className={styles.title} style={{marginBottom: 3}}>
+                  <div className={styles.shortTitle} style={{marginBottom: 3}}>
                     Mechatronics Engineering at the University of Waterloo
                   </div>
                   <div className={styles.location}>
@@ -191,6 +192,10 @@ export default function Home() {
                   </div>
                   <div className={styles.description}>
                   Created a Deep Q-Network agent for Mean Reversion stock trading strategies using 30,000 Apple stock prices, resulting in a 45% ROI.
+                  
+                  <div class="video-container" style={{borderRadius: "10px", overflow: "hidden", paddingTop: 15, height:120, width: 216}}>
+                    <video src='https://res.cloudinary.com/didbbtyab/video/upload/v1728412648/Apple_kios4n.mp4' autoPlay loop muted playsInline style={{borderRadius: "inherit", width: "100%", height: '100%', objectFit: "cover"}}></video>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -207,6 +212,9 @@ export default function Home() {
                   </div>
                   <div className={styles.description}>
                   Developed and deployed a portfolio-sharing web app that connected design students with agencies, receiving a $3000 grant from the Government of Ontario for its impact.
+                  <div class="video-container" style={{borderRadius: "10px", overflow: "hidden", paddingTop: 15, height:120, width: 216}}>
+                    <video src='https://res.cloudinary.com/didbbtyab/video/upload/v1728412648/Apple_kios4n.mp4' autoPlay loop muted playsInline style={{borderRadius: "inherit", width: "100%", height: '100%', objectFit: "cover"}}></video>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -238,7 +246,17 @@ export default function Home() {
         </div>
         <div style={{ width: '432px', height: '48px', marginLeft: 10}}>
           <h1 className={styles.name}>Aditya Ajay</h1>
-          <p className={styles.subtitle}>Mechatronics @ UWaterloo</p>
+          <div className={styles.descLinks}>
+              <p className={styles.subtitle}>Mechatronics @ UWaterloo</p>
+              <div className={styles.icons}>
+                <a href="https://www.linkedin.com/in/adityaajay33" target="_blank" rel="noopener noreferrer">
+                  <Image src="/icon/linkedin.png" alt="LinkedIn" width={24} height={24} />
+                </a>
+                <a href="https://www.github.com/adityaajay33" target="_blank" rel="noopener noreferrer">
+                  <Image src="/icon/github.png" alt="GitHub" width={24} height={24} />
+                </a>
+              </div>
+          </div>
         </div>
       </header>
 

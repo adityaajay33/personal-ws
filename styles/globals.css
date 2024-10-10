@@ -108,3 +108,9 @@ h2 {
 .socialLink:hover{
   text-decoration: underline
 }
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: inherit; /* Inherits the border radius from the container */
+}
