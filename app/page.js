@@ -48,58 +48,52 @@ export default function Home() {
 
             {/* Work Experience Section */}
             <section className={styles.workExperience} style={{marginBottom: 0}}>
-              <h2 className={styles.sectionTitle}>Work Experience</h2>
-
+              <h2 className={styles.sectionTitle}>Work & Projects</h2>
               <div className={styles.workExperienceCard}>
-                <div className={styles.date}>
-                  May - August <br/>2024
-                </div>
+                <div className={styles.date}>Jan 2025 - Now</div>
                 <div className={styles.jobDetails}>
-                  <div className={styles.title}>
-                    Machine Learning Engineer at Toyota Canada
-                  </div>
-                  <div className={styles.location}>
-                    Waterloo, Ontario
-                  </div>
-                  <div className={styles.description}>Designed an LSTM Autoencoder-based anomaly detection pipeline for 810 robots, reducing motor downtime by 19 minutes monthly. Co-engineered a data platform for 13 million records using Redis, PostgreSQL, and Plotly.
-                  </div>
-                </div>
-              </div>
-              <div className={styles.workExperienceCard}>
-                <div className={styles.date}>
-                  2023 - 2024
-                </div>
-                <div className={styles.jobDetails}>
-                  <div className={styles.title}>
-                    Firmware Developer at Waterloo Aerial Robotics Group
-                  </div>
-                  <div className={styles.location}>
-                    Waterloo, Ontario
-                  </div>
+                  <div className={styles.title}>Software Engineer at Toyota Canada</div>
+                  <div className={styles.location}>Waterloo, Ontario</div>
                   <div className={styles.description}>
-                  Created data acquisition algorithms for IMU and Brake IR Sensors using SPI/UART on STM32 MCU.
-                  </div>
-                </div>
-              </div>
-              <div className={styles.workExperienceCard} style={{marginBottom: 0}}>
-                <div className={styles.date}>
-                  2024
-                </div>
-                <div className={styles.jobDetails}>
-                  <div className={styles.title}>
-                  Student Research Author at Journal of Emerging Investigators
-                  </div>
-                  <div className={styles.location}>
-                  Toronto, Ontario
-                  </div>
-                  <div className={styles.description}>
-                  Published a machine learning paper on predicting EV carbon emission reductions with 98% R-squared accuracy.
-                    
+                    Developed a real-time device health dashboard using C# and TypeScript with MQTT integration for monitoring 145 vision systems.
                   </div>
                 </div>
               </div>
 
+              <div className={styles.workExperienceCard}>
+                <div className={styles.date}>Sep 2024 - Now</div>
+                <div className={styles.jobDetails}>
+                  <div className={styles.title}>Artificial Intelligence Research Assistant at VIP Lab</div>
+                  <div className={styles.location}>Waterloo, Ontario</div>
+                  <div className={styles.description}>
+                    Built a 3D Bladder Reconstruction Pipeline for Cancer research using a GAN depth estimation model and a SLAM reconstruction model.
+                  </div>
+                </div>
+              </div>
               
+              <div className={styles.workExperienceCard}>
+                <div className={styles.date}>May 2024 - Sep 2024</div>
+                <div className={styles.jobDetails}>
+                  <div className={styles.title}>Machine Learning Engineer at Toyota Canada</div>
+                  <div className={styles.location}>Waterloo, Ontario</div>
+                  <div className={styles.description}>
+                    Designed an LSTM Autoencoder-based anomaly detection pipeline for 810 robots, reducing motor downtime by 19 minutes monthly.
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.workExperienceCard}>
+                <div className={styles.date}>May 2024 - Sep 2024</div>
+                <div className={styles.jobDetails}>
+                  <div className={styles.title}>Software Engineer at WATOnomous</div>
+                  <div className={styles.location}>Waterloo, Ontario</div>
+                  <div className={styles.description}>
+                    Working on Behavior Trees and HD Maps for UW's autonomous <a href="https://www.watonomous.ca/" className="socialLink" style={{color: "#bbbbbb", textDecoration: "underline !important"}}>
+                      Kia Soul
+                    </a>
+                  </div>
+                </div>
+              </div>
             </section>
             <section className={styles.education}>
               <h2 className={styles.sectionTitle}>Education</h2>
@@ -109,7 +103,7 @@ export default function Home() {
                   2023 - 2028
                 </div>
                 <div className={styles.jobDetails}>
-                  <div className={styles.shortTitle} style={{marginBottom: 3}}>
+                  <div className={styles.title} style={{marginBottom: 3}}>
                     Mechatronics Engineering at the University of Waterloo
                   </div>
                   <div className={styles.location}>
@@ -193,9 +187,9 @@ export default function Home() {
                   <div className={styles.description}>
                   Created a Deep Q-Network agent for Mean Reversion stock trading strategies using 30,000 Apple stock prices, resulting in a 45% ROI.
                   
-                  <div class="video-container" style={{borderRadius: "10px", overflow: "hidden", paddingTop: 15, height:120, width: 216}}>
+                  {/*<div class="video-container" style={{borderRadius: "10px", overflow: "hidden", paddingTop: 15, height:120, width: 216}}>
                     <video src='https://res.cloudinary.com/didbbtyab/video/upload/v1728412648/Apple_kios4n.mp4' autoPlay loop muted playsInline style={{borderRadius: "inherit", width: "100%", height: '100%', objectFit: "cover"}}></video>
-                  </div>
+                  </div>*/}
                   </div>
                 </div>
               </div>
@@ -212,9 +206,9 @@ export default function Home() {
                   </div>
                   <div className={styles.description}>
                   Developed and deployed a portfolio-sharing web app that connected design students with agencies, receiving a $3000 grant from the Government of Ontario for its impact.
-                  <div class="video-container" style={{borderRadius: "10px", overflow: "hidden", paddingTop: 15, height:120, width: 216}}>
+                  {/*<div class="video-container" style={{borderRadius: "10px", overflow: "hidden", paddingTop: 15, height:120, width: 216}}>
                     <video src='https://res.cloudinary.com/didbbtyab/video/upload/v1728412648/Apple_kios4n.mp4' autoPlay loop muted playsInline style={{borderRadius: "inherit", width: "100%", height: '100%', objectFit: "cover"}}></video>
-                  </div>
+                  </div>*/}
                   </div>
                 </div>
               </div>
@@ -247,7 +241,7 @@ export default function Home() {
         <div style={{ width: '432px', height: '48px', marginLeft: 10}}>
           <h1 className={styles.name}>Aditya Ajay</h1>
           <div className={styles.descLinks}>
-              <p className={styles.subtitle}>Mechatronics @ UWaterloo</p>
+              <p className={styles.subtitle}>Mechatronics Engineering @ UWaterloo</p>
               <div className={styles.icons}>
                 <a href="https://www.linkedin.com/in/adityaajay33" target="_blank" rel="noopener noreferrer">
                   <Image src="/icon/linkedin.png" alt="LinkedIn" width={24} height={24} />

@@ -1,27 +1,49 @@
 @font-face {
   font-family: 'Graphik';
-  src: url('/fonts/Graphik-Regular.woff') format('wofff'); /* Use OTF format */
+  src: url('/fonts/Graphik/Graphik-Regular.woff') format('woff'); /* Use OTF format */
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Graphik';
-  src: url('/fonts/Graphik-Light.woff') format('wofff'); /* Use OTF format */
+  src: url('/fonts/Graphik/Graphik-Light.woff') format('woff'); /* Use OTF format */
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: 'Graphik';
-  src: url('/fonts/Graphik-Medium.woff') format('wofff'); /* Use OTF format */
+  src: url('/fonts/Graphik/Graphik-Medium.woff') format('woff'); /* Use OTF format */
   font-weight: 300;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Light.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Medium.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
 /* styles/globals.css */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Graphik", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
   background-color: #282828; /* Dark background */
   color: #eeeeee; /* Light text color */
   font-size: 20px;

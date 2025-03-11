@@ -48,7 +48,7 @@
 }
 
 .workExperience {
-  height: 44px;
+  height: 620px;
   margin: 50px 0px;
 }
 
@@ -128,10 +128,6 @@
   font-size: 16px;
   color: white;
   padding-bottom: 8px;
-}
-
-.workExperience{
-  height: 480px;
 }
 
 .workExperienceCard {
