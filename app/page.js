@@ -55,7 +55,7 @@ export default function Home() {
                   May - August <br/>2024
                 </div>
                 <div className={styles.jobDetails}>
-                  <div className={styles.shortTitle}>
+                  <div className={styles.title}>
                     Machine Learning Engineer at Toyota Canada
                   </div>
                   <div className={styles.location}>
