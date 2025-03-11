@@ -1,6 +1,7 @@
 // app/layout.tsx
 import styles from '../styles/globals.css';
 import { ReactNode } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
   title: 'Aditya Ajay',
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <div className="container">{children}</div>
+        <Analytics />
       </body>
     </html>
   );
