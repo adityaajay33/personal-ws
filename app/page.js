@@ -88,7 +88,7 @@ export default function Home() {
                   <div className={styles.title}>Software Engineer at WATOnomous</div>
                   <div className={styles.location}>Waterloo, Ontario</div>
                   <div className={styles.description}>
-                    Working on Behavior Trees and HD Maps for UW's autonomous <a href="https://www.watonomous.ca/" className="socialLink" style={{color: "#bbbbbb", textDecoration: "underline !important"}}>
+                    Working on Behavior Trees and HD Maps for UW&apos;ss autonomous <a href="https://www.watonomous.ca/" className="socialLink" style={{color: "#bbbbbb", textDecoration: "underline !important"}}>
                       Kia Soul
                     </a>
                   </div>
