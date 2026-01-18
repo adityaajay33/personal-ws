@@ -50,6 +50,8 @@ body {
   font-weight: 200;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 h1, h2, h3, p {
@@ -73,6 +75,24 @@ body {
   width: 80%;
   margin: 0 auto;
   padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 16px;
+  }
+  
+  body {
+    font-size: 18px;
+  }
 }
 
 .header {
@@ -124,7 +144,8 @@ h2 {
 
 .socialLink{
   color:#eeeeee;
-  text-decoration: none
+  text-decoration: none;
+  word-break: break-word;
 }
 
 .socialLink:hover{

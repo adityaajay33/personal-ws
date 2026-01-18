@@ -1,10 +1,24 @@
 /* app/page.module.css */
 .container {
-  max-width: 540px; /* Adjust this to your desired width */
-  margin: 0 auto;   /* Centers the container */
-  padding: 72px 20px; /* Adds padding on all sides */
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 72px 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 24px 12px;
+  }
+}
 
 .header {
   display: flex;
@@ -12,8 +26,18 @@
   margin-bottom: 40px;
 }
 
+/* Responsive header for smaller screens */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+}
+
 .imageContainer {
   margin-right: 20px;
+  flex-shrink: 0;
 }
 
 .profileImage {
@@ -21,37 +45,77 @@
   background-color: #222222;
 }
 
+/* Responsive profile image */
+@media (max-width: 480px) {
+  .imageContainer {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+}
+
 .textContainer {
   color: #eeeeee;
+  flex: 1;
+  min-width: 0;
 }
 
 .name {
   font-size: 20px;
   font-weight: 400;
-  height: 26px;
+  margin-bottom: 4px;
 }
 
 .subtitle {
   display: flex;
   font-size: 16px;
   color: #bbbbbb;
-  height:22px;
   align-items: center;
-  width: 90%;
+  margin-right: 8px;
+  flex-wrap: wrap;
+  line-height: 1.4;
 }
 
-.about{
-  height: 44px;
+/* Responsive subtitle */
+@media (max-width: 480px) {
+  .subtitle {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+.about {
   margin: 40px 0px;
-  display: flex;
-  align-items: center;
+}
+
+/* Responsive about section */
+@media (max-width: 768px) {
+  .about {
+    margin: 32px 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    margin: 24px 0px;
+  }
 }
 
 .workExperience {
-  height: 620px;
   margin: 50px 0px;
 }
 
+/* Responsive work experience */
+@media (max-width: 768px) {
+  .workExperience {
+    margin: 40px 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .workExperience {
+    margin: 32px 0px;
+  }
+}
 
 .job {
   margin-bottom: 30px;
@@ -70,27 +134,36 @@
   color: #eeeeee;
 }
 
-.subTag{
-  color: #bbbbbb
+.subTag {
+  color: #bbbbbb;
 }
 
-.content{
+.content {
   color: #a7a7a7;
   font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Responsive content */
+@media (max-width: 480px) {
+  .content {
+    font-size: 15px;
+    line-height: 1.4;
+  }
 }
 
 .tabContainer {
   position: relative;
   display: flex;
-  justify-content: flex-start; /* Push the tabs to the left */
-  border-bottom: none; /* Remove the grey line under the tabs */
+  justify-content: flex-start;
+  border-bottom: none;
 }
-/* New styling for the tabs */
+
 .tabs {
   display: flex;
-  justify-content: flex-start; /* Push tabs to the left */
-  width: auto; /* Allow the tabs to have a natural width */
-  gap: 20px; /* Add some space between each tab */
+  justify-content: flex-start;
+  width: auto;
+  gap: 20px;
   position: relative;
 }
 
@@ -110,7 +183,6 @@
   transition: color 0.3s ease;
 }
 
-/* Keep the underline style basic */
 .underline {
   position: absolute;
   bottom: 0;
@@ -118,59 +190,166 @@
   height: 1px;
   width: 1px;
   background-color: white;
-  transition: transform 0.3s ease, width 0.3s ease; /* Smooth transition for both width and position */
+  transition: transform 0.3s ease, width 0.3s ease;
 }
 
-.sectionTitle{
-
+.sectionTitle {
   font-family: -apple-system, BlinkMacSystemFont, "Graphik", sans-serif;
   font-weight: 200;
   font-size: 16px;
   color: white;
   padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.education {
+  margin: 50px 0px;
+}
+
+.contact {
+  margin: 50px 0px 0px 0px;
+}
+
+@media (max-width: 768px) {
+  .education {
+    margin: 40px 0px;
+  }
+  
+  .contact {
+    margin: 40px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .education {
+    margin: 32px 0px;
+  }
+  
+  .contact {
+    margin: 32px 0px 0px 0px;
+  }
 }
 
 .workExperienceCard {
-  display: flex;           /* Use flexbox to align items side by side */
-  justify-content: flex-start;  /* Align them to the start */
-  gap: 20px;               /* Adjust the space between the two divs */
-  margin: 28px 0px;
-  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin: 28px 0px 40px 0px;
+}
+
+/* Responsive experience cards */
+@media (max-width: 768px) {
+  .workExperienceCard {
+    flex-direction: column;
+    gap: 8px;
+    margin: 24px 0px 32px 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .workExperienceCard {
+    margin: 20px 0px 28px 0px;
+  }
 }
 
 .date {
   color: #7b7b7b;
   width: 20%;
+  flex-shrink: 0;
+  line-height: 1.4;
 }
 
-.jobDetails{
+/* Responsive date */
+@media (max-width: 768px) {
+  .date {
+    width: 100%;
+  }
+}
+
+.jobDetails {
   width: 80%;
   font-size: 15px;
+  min-width: 0;
+}
+
+/* Responsive job details */
+@media (max-width: 768px) {
+  .jobDetails {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .jobDetails {
+    font-size: 14px;
+  }
 }
 
 .title {
   width: 100%;
   color: #eeeeee;
   padding-bottom: 2px;
-  height: 22px;
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  line-height: 1.4;
 }
 
-.location{
+/* Responsive title */
+@media (max-width: 768px) {
+  .title {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.companyLocation {
   padding-bottom: 12px;
-
-  color: #bbbbbb
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 1.4;
+  gap: 0;
 }
 
-.description{
+.company {
+  color: #bbbbbb;
+  font-weight: 300;
+}
+
+.separator {
+  color: #7b7b7b;
+  margin: 0 4px;
+}
+
+.location {
+  color: #999999;
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .companyLocation {
+    font-size: 14px;
+  }
+}
+
+.description {
   font-weight: 200;
-  color: #bbbbbb
+  color: #bbbbbb;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .description {
+    line-height: 1.4;
+  }
 }
 
 .video-container {
   width: 40px;
   height: 40px;
-  border-radius: 8px !important; /* Add !important to override other styles */
+  border-radius: 8px !important;
   overflow: hidden;
   position: relative;
 }
@@ -178,7 +357,7 @@
 .video-container video {
   width: 100%;
   height: 100%;
-  border-radius: inherit !important; /* Inherit the parent's border-radius */
+  border-radius: inherit !important;
   object-fit: cover;
 }
 
@@ -188,17 +367,28 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; /* Position it above video if needed */
-  pointer-events: none; /* Let clicks pass through */
+  z-index: 1;
+  pointer-events: none;
 }
 
-.descLinks{
-
+.descLinks {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.icons{
+/* Responsive desc links */
+@media (max-width: 480px) {
+  .descLinks {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
 
+.icons {
   display: flex;
+  gap: 8px;
+  flex-shrink: 0;
 }
