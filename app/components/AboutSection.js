@@ -1,7 +1,7 @@
 import styles from '../../styles/page.module.css';
 import ExperienceCard from './ExperienceCard';
 import SocialLink from './SocialLink';
-import { workExperiences, education, socials } from '../data/experiences';
+import { workExperiences, education, projects, socials } from '../data/experiences';
 
 export default function AboutSection() {
   return (
@@ -9,13 +9,13 @@ export default function AboutSection() {
       {/* About Section */}
       <section className={styles.about}>
         <p className={styles.content}>
-          Software Engineer — background in computer vision and ML infrastructure.
+          software engineer — computer vision and machine learning infrastructure.
         </p>
       </section>
 
       {/* Work Experience Section */}
-      <section className={styles.workExperience} style={{ marginBottom: 0 }}>
-        <h2 className={styles.sectionTitle}>Work & Projects</h2>
+      <section className={styles.workExperience}>
+        <h2 className={styles.sectionTitle}>Experience</h2>
         {workExperiences.map((exp, index) => (
           <ExperienceCard
             key={index}
@@ -23,6 +23,19 @@ export default function AboutSection() {
             title={exp.title}
             company={exp.company}
             description={exp.description}
+          />
+        ))}
+      </section>
+
+      {/* Projects Section */}
+      <section className={styles.projects}>
+        <h2 className={styles.sectionTitle}>Projects</h2>
+        {projects.map((project, index) => (
+          <ExperienceCard
+            key={index}
+            date={project.date}
+            title={project.title}
+            description={project.description}
           />
         ))}
       </section>
@@ -47,9 +60,6 @@ export default function AboutSection() {
             platform={social.platform}
             href={social.href}
             displayText={social.displayText}
-            style={{
-              margin: index === socials.length - 1 ? '15px 0px 100px 0px' : '15px 0px'
-            }}
           />
         ))}
       </section>

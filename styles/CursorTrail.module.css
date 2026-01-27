@@ -1,0 +1,53 @@
+.cursorTrailContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--text-tertiary);
+  opacity: 0.4;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: fadeDot 0.6s ease-out forwards;
+}
+
+@keyframes fadeDot {
+  0% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+/* Reduce effect on smaller screens */
+@media (max-width: 768px) {
+  .dot {
+    width: 4px;
+    height: 4px;
+    opacity: 0.3;
+  }
+}
+
+/* Disable on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .cursorTrailContainer {
+    display: none;
+  }
+}

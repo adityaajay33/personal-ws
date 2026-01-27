@@ -2,7 +2,7 @@
 .container {
   max-width: 540px;
   margin: 0 auto;
-  padding: 72px 20px;
+  padding: 64px 20px 80px;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -10,110 +10,96 @@
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .container {
-    padding: 40px 16px;
+    padding: 48px 16px 64px;
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 24px 12px;
+    padding: 32px 12px 48px;
   }
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 /* Responsive header for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 40px;
+  }
+}
+
 @media (max-width: 480px) {
   .header {
-    flex-direction: column;
-    align-items: flex-start;
     margin-bottom: 32px;
   }
 }
 
-.imageContainer {
-  margin-right: 20px;
-  flex-shrink: 0;
-}
-
-.profileImage {
-  border-radius: 50%;
-  background-color: #222222;
-}
-
-/* Responsive profile image */
-@media (max-width: 480px) {
-  .imageContainer {
-    margin-right: 0;
-    margin-bottom: 12px;
-  }
-}
-
-.textContainer {
-  color: #eeeeee;
-  flex: 1;
-  min-width: 0;
+.nameRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
 }
 
 .name {
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 4px;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+  color: var(--text-primary);
 }
 
 .subtitle {
-  display: flex;
-  font-size: 16px;
-  color: #bbbbbb;
-  align-items: center;
-  margin-right: 8px;
-  flex-wrap: wrap;
-  line-height: 1.4;
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
 }
 
 /* Responsive subtitle */
 @media (max-width: 480px) {
   .subtitle {
     font-size: 14px;
-    width: 100%;
+  }
+  
+  .name {
+    font-size: 22px;
   }
 }
 
 .about {
-  margin: 40px 0px;
+  margin-bottom: 56px;
 }
 
 /* Responsive about section */
 @media (max-width: 768px) {
   .about {
-    margin: 32px 0px;
+    margin-bottom: 48px;
   }
 }
 
 @media (max-width: 480px) {
   .about {
-    margin: 24px 0px;
+    margin-bottom: 40px;
   }
 }
 
 .workExperience {
-  margin: 50px 0px;
+  margin-bottom: 56px;
 }
 
 /* Responsive work experience */
 @media (max-width: 768px) {
   .workExperience {
-    margin: 40px 0px;
+    margin-bottom: 48px;
   }
 }
 
 @media (max-width: 480px) {
   .workExperience {
-    margin: 32px 0px;
+    margin-bottom: 40px;
   }
 }
 
@@ -135,20 +121,20 @@
 }
 
 .subTag {
-  color: #bbbbbb;
+  color: var(--text-tertiary);
 }
 
 .content {
-  color: #a7a7a7;
-  font-size: 16px;
-  line-height: 1.5;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 /* Responsive content */
 @media (max-width: 480px) {
   .content {
-    font-size: 15px;
-    line-height: 1.4;
+    font-size: 14px;
+    line-height: 1.5;
   }
 }
 
@@ -168,16 +154,16 @@
 }
 
 .tab {
-  color: #888;
-  font-size: 16px;
+  color: var(--text-tertiary);
+  font-size: 15px;
   cursor: pointer;
   padding-bottom: 10px;
   transition: color 0.3s ease;
 }
 
 .activeTab {
-  color: #ffffff;
-  font-size: 16px;
+  color: var(--text-primary);
+  font-size: 15px;
   cursor: pointer;
   padding-bottom: 10px;
   transition: color 0.3s ease;
@@ -189,44 +175,86 @@
   left: 0;
   height: 1px;
   width: 1px;
-  background-color: white;
+  background-color: var(--text-primary);
   transition: transform 0.3s ease, width 0.3s ease;
 }
 
 .sectionTitle {
-  font-family: -apple-system, BlinkMacSystemFont, "Graphik", sans-serif;
-  font-weight: 200;
-  font-size: 16px;
-  color: white;
-  padding-bottom: 8px;
-  margin-bottom: 12px;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  text-transform: lowercase;
+}
+
+.projects {
+  margin-bottom: 56px;
 }
 
 .education {
-  margin: 50px 0px;
+  margin-bottom: 56px;
 }
 
 .contact {
-  margin: 50px 0px 0px 0px;
+  margin-bottom: 56px;
+}
+
+.footer {
+  margin-top: 40px;
+}
+
+.footerText {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
 }
 
 @media (max-width: 768px) {
-  .education {
-    margin: 40px 0px;
+  .contact {
+    margin-bottom: 48px;
   }
   
-  .contact {
-    margin: 40px 0px 0px 0px;
+  .footer {
+    margin-top: 32px;
   }
 }
 
 @media (max-width: 480px) {
-  .education {
-    margin: 32px 0px;
+  .contact {
+    margin-bottom: 40px;
   }
   
-  .contact {
-    margin: 32px 0px 0px 0px;
+  .footer {
+    margin-top: 24px;
+  }
+  
+  .footerText {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    margin-bottom: 16px;
+  }
+  
+  .projects {
+    margin-bottom: 48px;
+  }
+  
+  .education {
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects {
+    margin-bottom: 40px;
+  }
+  
+  .education {
+    margin-bottom: 40px;
   }
 }
 
@@ -234,7 +262,23 @@
   display: flex;
   justify-content: flex-start;
   gap: 20px;
-  margin: 28px 0px 40px 0px;
+  margin-bottom: 24px;
+}
+
+.workExperienceCard:last-child {
+  margin-bottom: 0;
+}
+
+/* Social links - less spacing */
+.socialCard {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.socialCard:last-child {
+  margin-bottom: 0;
 }
 
 /* Responsive experience cards */
@@ -242,33 +286,56 @@
   .workExperienceCard {
     flex-direction: column;
     gap: 8px;
-    margin: 24px 0px 32px 0px;
+    margin-bottom: 20px;
+  }
+  
+  .socialCard {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .workExperienceCard {
-    margin: 20px 0px 28px 0px;
+    margin-bottom: 16px;
+  }
+  
+  .socialCard {
+    margin-bottom: 8px;
   }
 }
 
 .date {
-  color: #7b7b7b;
-  width: 20%;
+  color: var(--text-muted);
+  width: 110px;
+  min-width: 110px;
   flex-shrink: 0;
-  line-height: 1.4;
+  line-height: 1.5;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: visible;
 }
 
 /* Responsive date */
 @media (max-width: 768px) {
   .date {
     width: 100%;
+    min-width: 0;
+    font-size: 12px;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .date {
+    font-size: 12px;
   }
 }
 
 .jobDetails {
-  width: 80%;
-  font-size: 15px;
+  flex: 1;
+  font-size: 14px;
   min-width: 0;
 }
 
@@ -281,19 +348,20 @@
 
 @media (max-width: 480px) {
   .jobDetails {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
 .title {
   width: 100%;
-  color: #eeeeee;
-  padding-bottom: 2px;
+  color: var(--text-primary);
+  margin-bottom: 4px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 4px;
-  line-height: 1.4;
+  line-height: 1.5;
+  font-weight: 500;
 }
 
 /* Responsive title */
@@ -305,7 +373,7 @@
 }
 
 .companyLocation {
-  padding-bottom: 12px;
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -314,17 +382,17 @@
 }
 
 .company {
-  color: #bbbbbb;
-  font-weight: 300;
+  color: var(--text-secondary);
+  font-weight: 400;
 }
 
 .separator {
-  color: #7b7b7b;
+  color: var(--text-muted);
   margin: 0 4px;
 }
 
 .location {
-  color: #999999;
+  color: var(--text-tertiary);
   font-style: italic;
 }
 
@@ -335,14 +403,14 @@
 }
 
 .description {
-  font-weight: 200;
-  color: #bbbbbb;
-  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-tertiary);
+  line-height: 1.6;
 }
 
 @media (max-width: 480px) {
   .description {
-    line-height: 1.4;
+    line-height: 1.5;
   }
 }
 
@@ -371,24 +439,3 @@
   pointer-events: none;
 }
 
-.descLinks {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-/* Responsive desc links */
-@media (max-width: 480px) {
-  .descLinks {
-    flex-direction: column;
-    gap: 8px;
-  }
-}
-
-.icons {
-  display: flex;
-  gap: 8px;
-  flex-shrink: 0;
-}
