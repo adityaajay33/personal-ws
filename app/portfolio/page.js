@@ -60,7 +60,7 @@ export default function Portfolio() {
               Neural dynamics of deformable objects <span className={styles.affiliation}>— Palatial</span>
             </h2>
             <p className={styles.description}>
-              Explored residual world models to estimate object deformation, using a mass-spring physics backbone.
+              Used residual world models to estimate object deformation, using a mass-spring physics backbone.
             </p>
           </div>
         </article>
