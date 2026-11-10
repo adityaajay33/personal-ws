@@ -1,11 +1,5 @@
 import styles from '../styles/page.module.css';
 
-const videos = [
-  { name: 'robot-01', description: 'Robot arm working in a factory' },
-  { name: 'robot-02', description: 'Automated robotic assembly' },
-  { name: 'robot-03', description: 'Robot arm stacking pallets' },
-];
-
 export default function Home() {
   return (
     <main className={styles.hero}>
@@ -55,25 +49,6 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <section className={styles.videoGrid} aria-label="Robotics videos">
-        {videos.map((video) => (
-          <article className={styles.videoCard} key={video.name}>
-            <div className={styles.videoFrame}>
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                poster={`/videos/${video.name}.jpg`}
-                aria-label={video.description}
-              >
-                <source src={`/videos/${video.name}.mp4`} type="video/mp4" />
-              </video>
-            </div>
-          </article>
-        ))}
-      </section>
     </main>
   );
 }
