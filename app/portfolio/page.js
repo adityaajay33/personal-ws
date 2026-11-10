@@ -23,7 +23,7 @@ export default function Portfolio() {
           <ProjectVideo />
           <div className={styles.caption}>
             <h2 id="newton-title" className={styles.title}>
-              Real2Sim for Boba Making Robot <span className={styles.affiliation}>— Palatial</span>
+              Real2Sim for Boba Making Robot
             </h2>
             <p className={styles.description}>
               Simulated bottle deformation with VBD, milk with Newton implicit MPM, and coffee particles with XPBD. Kinematically retargeted robot motion from real video.
@@ -41,7 +41,7 @@ export default function Portfolio() {
           />
           <div className={styles.caption}>
             <h2 id="reconstruction-title" className={styles.title}>
-              Human-to-Sim-to-Robot <span className={styles.affiliation}>— Palatial</span>
+              Human-to-Sim-to-Robot
             </h2>
             <p className={styles.description}>
               Kinematically retargeted human hand motion to a Sharpa hand in simulation, using fingertip poses and forward kinematics for hand pose, and end-effector poses with inverse kinematics for arm motion.
@@ -57,7 +57,7 @@ export default function Portfolio() {
           />
           <div className={styles.caption}>
             <h2 id="deformation-title" className={styles.title}>
-              Neural dynamics of deformable objects <span className={styles.affiliation}>— Palatial</span>
+              Neural dynamics of deformable objects
             </h2>
             <p className={styles.description}>
               Used residual world models to estimate object deformation, using a mass-spring physics backbone.
@@ -73,7 +73,7 @@ export default function Portfolio() {
           />
           <div className={styles.caption}>
             <h2 id="task-packages-title" className={styles.title}>
-              Task packages <span className={styles.affiliation}>— Palatial</span>
+              Task packages
             </h2>
             <p className={styles.description}>
               Built an agent-driven pipeline that turns videos, text, and USD scenes into standalone Isaac Lab task packages with robot controls, observations, rewards, and termination conditions.
